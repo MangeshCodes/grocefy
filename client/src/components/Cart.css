@@ -1,0 +1,101 @@
+.cart-img-rect {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.cart-modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  min-width: 340px;
+  box-shadow: 0 6px 32px rgba(44, 62, 80, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem 0;
+  width: 100%;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+.cart-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 1px solid #e0e0e0;
+}
+.cart-info {
+  display: flex;
+  flex-direction: column;
+}
+.cart-item-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.cart-item-shop {
+  color: #6C63FF;
+  font-size: 0.95rem;
+}
+.cart-item-price {
+  color: #43a047;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 1rem 0 1.5rem 0;
+}
+.cart-total-amount {
+  color: #43a047;
+}
+.cart-close-btn {
+  background: linear-gradient(90deg, #43a047 60%, #6C63FF 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.cart-close-btn:hover {
+  background: linear-gradient(90deg, #6C63FF 60%, #43a047 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+.cart-empty {
+  color: #888;
+  margin: 1.5rem 0;
+}

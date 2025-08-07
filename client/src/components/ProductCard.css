@@ -1,0 +1,174 @@
+/* Rectangular image style for modern card */
+.modern-card-img-wrap-rect {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  background: #f3e8fd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.07);
+}
+.modern-card-img-rect {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* Solid green Add to Cart button */
+.solid-green-btn {
+  background: #43a047 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(67, 160, 71, 0.10);
+  border: none;
+}
+.solid-green-btn:hover {
+  background: #388e3c !important;
+  color: #fff !important;
+}
+/* Modern e-commerce card styles */
+.modern-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(67, 160, 71, 0.10);
+  padding: 20px 18px 18px 18px;
+  width: 270px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+  border: 1.5px solid #c8e6c9;
+  gap: 18px;
+}
+.modern-card-img-wrap {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  background: #f3e8fd;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.07);
+}
+.modern-card-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+}
+.modern-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+.modern-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+.modern-card-shop {
+  color: #6C63FF;
+  font-size: 1.01rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.modern-card-expiry {
+  color: #ff7043;
+  font-size: 0.97rem;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+.modern-card-price {
+  color: #43a047;
+  font-weight: 700;
+  font-size: 1.13rem;
+  margin-bottom: 8px;
+}
+.modern-add-cart-btn {
+  background: linear-gradient(90deg, #6C63FF 60%, #43a047 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.modern-add-cart-btn:hover {
+  background: linear-gradient(90deg, #43a047 60%, #6C63FF 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+.modern-cart-icon {
+  font-size: 1.2rem;
+}
+/* Grocefy theme card */
+.product-card {
+  background: linear-gradient(135deg, #e8f5e9 60%, #fff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(67, 160, 71, 0.10);
+  padding: 22px 18px 18px 18px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 22px;
+  border: 1.5px solid #c8e6c9;
+}
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(67, 160, 71, 0.18);
+  transform: translateY(-4px) scale(1.04);
+}
+.product-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2.5px solid #43a047;
+  background: #f1f8e9;
+  display: block;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.product-name {
+  font-weight: 700;
+  font-size: 1.13rem;
+  margin-bottom: 2px;
+  color: #222;
+}
+.product-shop {
+  color: #388e3c;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+.product-expiry {
+  color: #ff7043;
+  font-size: 0.97rem;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+.product-price {
+  color: #43a047;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-bottom: 4px;
+}
