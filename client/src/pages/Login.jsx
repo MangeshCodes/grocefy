@@ -26,9 +26,23 @@ function Login() {
       // Example endpoint, update as needed
       const res = await axios.post('/api/users/login', { ...form, role });
       setMessage(res.data.message || 'Login successful!');
-      // Redirect to dashboard with role
+      
+      // Store role and user info in localStorage
+      localStorage.setItem('userRole', role);
+      if (res.data.user) {
+        localStorage.setItem('userId', res.data.user._id);
+        if (res.data.user.shopCode) {
+          localStorage.setItem('shopCode', res.data.user.shopCode);
+        }
+      }
+      
+      // Redirect based on role
       setTimeout(() => {
-        navigate('/dashboard', { state: { role } });
+        if (role === 'shopkeeper') {
+          navigate('/shopkeeper');
+        } else {
+          navigate('/dashboard', { state: { role } });
+        }
       }, 800);
     } catch (err) {
       setMessage(err.response?.data?.message || 'Login failed');

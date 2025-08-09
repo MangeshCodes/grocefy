@@ -1,7 +1,7 @@
 
 const express = require('express');
 const router = express.Router();
-const User = require('../models/models');
+const { User } = require('../models/models');
 const bcrypt = require('bcryptjs');
 
 // Register a new user
@@ -41,6 +41,45 @@ router.post('/register', async (req, res) => {
         }
 
         res.status(201).json({ message: 'User registered successfully', user: responseUser });
+    } catch (err) {
+        res.status(500).json({ message: 'Server error', error: err.message });
+    }
+});
+
+// Login user
+router.post('/login', async (req, res) => {
+    try {
+        const { email, password, role } = req.body;
+        
+        // Find user by email and role
+        const user = await User.findOne({ email, role });
+        if (!user) {
+            return res.status(401).json({ message: 'Invalid credentials' });
+        }
+
+        // Check password
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Invalid credentials' });
+        }
+
+        // Prepare user response
+        let responseUser = { 
+            _id: user._id, 
+            name: user.name, 
+            email: user.email, 
+            role: user.role 
+        };
+        
+        if (user.role === 'shopkeeper') {
+            responseUser.shopCode = user.shopCode;
+            responseUser.paymentStatus = user.paymentStatus;
+        }
+
+        res.json({ 
+            message: 'Login successful', 
+            user: responseUser 
+        });
     } catch (err) {
         res.status(500).json({ message: 'Server error', error: err.message });
     }

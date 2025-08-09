@@ -1,0 +1,10 @@
+{
+  "name": "test-runner",
+  "version": "1.0.0",
+  "scripts": {
+    "test:dashboard": "npx react-scripts test src/pages/Dashboard.test.jsx --watchAll=false --testTimeout=10000",
+    "test:product-card": "npx react-scripts test src/components/TProductCard.test.jsx --watchAll=false --testTimeout=10000",
+    "test:api": "npx react-scripts test src/api --watchAll=false --testTimeout=10000",
+    "test:all": "npx react-scripts test --watchAll=false --testTimeout=10000"
+  }
+}

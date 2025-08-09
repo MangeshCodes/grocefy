@@ -199,3 +199,237 @@ button:hover {
   margin-bottom: 0.3rem;
   font-size: 1.05rem;
 }
+
+/* Modern Product Card Styles */
+.modern-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(67, 160, 71, 0.10);
+  padding: 1.5rem;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1.5px solid #e8f5e8;
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(67, 160, 71, 0.20);
+}
+
+.modern-card-img-wrap-rect {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modern-card-img-rect {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.modern-card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modern-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.modern-card-shop {
+  font-size: 0.9rem;
+  color: #6C63FF;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.modern-card-expiry {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.modern-card-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #43a047;
+  margin-bottom: 1rem;
+}
+
+.modern-add-cart-btn {
+  background: linear-gradient(90deg, #43a047 0%, #66bb6a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.modern-add-cart-btn:hover {
+  background: linear-gradient(90deg, #388e3c 0%, #43a047 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(67, 160, 71, 0.3);
+}
+
+.solid-green-btn {
+  background: #43a047 !important;
+}
+
+.solid-green-btn:hover {
+  background: #388e3c !important;
+}
+
+.modern-cart-icon {
+  font-size: 1rem;
+}
+
+/* Shops Grid Styles */
+.shops-view-area {
+  margin-top: 10px;
+}
+
+.shops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.shop-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(67, 160, 71, 0.10);
+  padding: 1.5rem;
+  border: 1.5px solid #c8e6c9;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.shop-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(67, 160, 71, 0.20);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-flex {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .dashboard-sidebar {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+  
+  .dashboard-main {
+    padding: 1.5rem !important;
+  }
+  
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 1rem !important;
+  }
+  
+  .shops-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .modern-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .feature-buttons .sidebar-btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Feature Buttons Styling */
+.feature-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.feature-buttons .sidebar-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #43a047 60%, #66bb6a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(67, 160, 71, 0.15);
+  transition: all 0.2s ease;
+  text-align: center;
+  border: 1px solid rgba(67, 160, 71, 0.2);
+}
+
+.feature-buttons .sidebar-btn:not(:disabled):hover {
+  background: linear-gradient(90deg, #388e3c 60%, #43a047 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(67, 160, 71, 0.25);
+}
+
+.feature-buttons .sidebar-btn:disabled {
+  background: #e0e0e0;
+  color: #9e9e9e;
+  cursor: not-allowed;
+  opacity: 0.8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Enhanced Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+/* Dashboard Content Wrapper */
+.dashboard-content {
+  width: 100%;
+}
+
+/* Enhanced Button Hover Effects */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.12);
+}
